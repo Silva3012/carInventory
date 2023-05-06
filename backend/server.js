@@ -1,11 +1,12 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const helmet = require("helmet");
 const PORT = process.env.PORT || 3001;
 const mongoose = require('mongoose');
 
 const app = express();
-
+app.use(helmet());
 app.use(cors())
 // Use JSON middleware to parse incoming request
 app.use(express.json());
