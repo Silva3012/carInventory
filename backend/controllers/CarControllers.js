@@ -44,6 +44,7 @@ exports.getCarById = async (req, res) => {
   }
 };
 
+
 // UPDATE a car by ID
 exports.updateCarById = async (req, res) => {
   try {

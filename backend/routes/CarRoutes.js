@@ -18,9 +18,6 @@ router.post('/cars', createCar);
 // READ all cars
 router.get('/cars', getAllCars);
 
-// READ A CAR BY ID
-router.get('/cars/:id', getCarById);
-
 // UPDATE a car by ID
 router.put('/cars/:id', updateCarById);
 
@@ -32,6 +29,9 @@ router.patch('/cars/multiple', updateMultipleCars);
 
 // Listing model, make, registration number, and current owner for all cars older than 5 years:
 router.get('/cars/olderThanFiveYears', listOlderThanFiveYears);
+
+// READ A CAR BY ID
+router.get('/cars/:id', getCarById);
 
 // Export to use in server.js
 module.exports = router;
