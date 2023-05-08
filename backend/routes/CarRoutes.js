@@ -6,6 +6,7 @@ const {
   createCar, 
   getAllCars, 
   updateCarById, 
+  getCarById,
   deleteCarById,
   updateMultipleCars,
   listOlderThanFiveYears 
@@ -16,6 +17,9 @@ router.post('/cars', createCar);
 
 // READ all cars
 router.get('/cars', getAllCars);
+
+// READ A CAR BY ID
+router.get('/cars/:id', getCarById);
 
 // UPDATE a car by ID
 router.put('/cars/:id', updateCarById);
