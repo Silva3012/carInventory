@@ -11,8 +11,10 @@ import {
 } from '@mui/material';
 
 export default function OlderThanFiveYears() {
+// State hook to store older cars fetched from the server
   const [olderCars, setOlderCars] = useState([]);
 
+// Effect hook to fetch older cars from the server when the component mounts
   useEffect(() => {
     fetch('/cars/olderThanFiveYears')
       .then((response) => response.json())
@@ -20,6 +22,7 @@ export default function OlderThanFiveYears() {
       .catch((error) => console.error(error));
   }, []);
 
+// Render the component
   return (
     <Container maxWidth="sm">
       <Typography variant="h5" align="center" style={{ marginTop: '30px' }}>
