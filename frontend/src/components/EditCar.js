@@ -6,7 +6,6 @@ import {
   Button, 
   Grid,
   Typography,
-  Box,
   Container
 } from '@mui/material';
 

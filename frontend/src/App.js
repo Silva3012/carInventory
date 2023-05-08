@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import EditCar from './components/EditCar';
 import AddCar from './components/AddCar';
 import Copyright from './components/Copyright';
+import UpdateCars from './components/UpdateCars';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
             <Route path="/" element={<Link to="/Dashboard" />} />
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Add-Car" element={<AddCar />} />
+            <Route path="/Update-Cars" element={<UpdateCars />} />
             <Route path="/cars/:id/edit" element={<EditCar />} />
           </Routes> 
         <Copyright />  

@@ -59,7 +59,10 @@ export default function AddCar() {
         // Log an any errors
         console.log(error);
     }
-};
+  };
+
+  // Handle Cancel
+  const handleCancel = () => navigate('/Dashboard');
 
   // Return a form with input fields for adding a new car and a submit button
   // The form submission is handled by the handleSubmit function
@@ -139,6 +142,15 @@ export default function AddCar() {
               sx={{ mt: 3, mb: 10 }}
             >
               Add Car
+            </Button>{" "}
+            <Button
+              variant="contained"
+              color="secondary"
+              type="submit"
+              sx={{ mt: 3, mb: 10 }}
+              onClick={handleCancel}
+            >
+              Cancel
             </Button>
           </form>
         </Box>
