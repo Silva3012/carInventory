@@ -106,7 +106,7 @@ exports.listOlderThanFiveYears = async (req, res) => {
     const currentYear = new Date().getFullYear();
 
     const cars = await Car.find({ year: { $lt: currentYear - 5 } }).select(
-      "model make reg_num owner"
+      "model make reg_num owner year"
     );
 
     res.json(cars);
