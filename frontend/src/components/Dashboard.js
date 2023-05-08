@@ -9,17 +9,22 @@ import {
   TableContainer, 
   TableHead, 
   TableRow, 
-  Paper, 
-//   Button 
+  Paper,
+  Typography, 
 } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
-import AddCar from './AddCar';
 
 // Define styles for the component
 const CustomTableContainer = styled(TableContainer)({
-  margin: '20px',
+    maxWidth: '70%',
+    overflow: 'auto',
+    margin: 'auto',
+    marginLeft: '300px',
+    display: 'flex',
+    justifyContent: 'center',
+    
 });
 
 // Define the Dashboard component
@@ -40,22 +45,6 @@ export default function Dashboard() {
         fetchCars();
     }, []);
 
-    // Function to add a new car
-    const handleAddCar = async (car) => {
-        // Make a POST request to the /cars endpoint on the server
-        const res = await fetch('/cars', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(car)
-        });
-        // Parse the response body as JSON data
-        const data = await res.json();
-        // Add the new car to the list of cars in state
-        setCars([...cars, data.car]);
-    }
-
     // Function to handle edit car
     const handleEditCar = (car) => {
         navigate(`/cars/${car._id}/edit`);
@@ -75,9 +64,13 @@ export default function Dashboard() {
     }
     };
 
-
+    // Render table with the list of cars
     return (
-        <CustomTableContainer component={Paper}>
+        <div>
+        <Typography variant="h5" component="h2" gutterBottom align="center" style={{ marginTop: '20px' }}>
+        Cars List
+        </Typography>
+        <CustomTableContainer component={Paper} style={{ marginBottom: '20px' }}>
         <Table>
             <TableHead>
             <TableRow>
@@ -119,8 +112,7 @@ export default function Dashboard() {
             ))}
             </TableBody>
         </Table>
-        <AddCar onAdd={handleAddCar} />
-        </CustomTableContainer>  
-        
+        </CustomTableContainer> 
+        </div>
     );
 }
