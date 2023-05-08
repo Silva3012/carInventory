@@ -5,8 +5,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import EditNoteIcon from '@mui/icons-material/EditNote';
-import PeopleIcon from '@mui/icons-material/People';
 import AddIcon from '@mui/icons-material/Add';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import { Link } from 'react-router-dom';
 
 
@@ -34,11 +34,11 @@ export const ListItems = (
       <ListItemText primary="Update Cars" />
     </ListItemButton>
     {/* Owners Item */}
-    <ListItemButton component={Link} to='/Owners'>
+    <ListItemButton component={Link} to='/OlderThanFiveYears'>
       <ListItemIcon>
-        <PeopleIcon />
+        <DirectionsCarIcon />
       </ListItemIcon>
-      <ListItemText primary="Owners" />
+      <ListItemText primary="Cars 5 years+" />
     </ListItemButton>
   </React.Fragment>
 );

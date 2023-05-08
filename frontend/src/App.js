@@ -6,6 +6,7 @@ import EditCar from './components/EditCar';
 import AddCar from './components/AddCar';
 import Copyright from './components/Copyright';
 import UpdateCars from './components/UpdateCars';
+import OlderThanFiveYears from './components/OlderThanFiveYears';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Add-Car" element={<AddCar />} />
             <Route path="/Update-Cars" element={<UpdateCars />} />
+            <Route path="/OlderThanFiveYears" element={<OlderThanFiveYears />} />
             <Route path="/cars/:id/edit" element={<EditCar />} />
           </Routes> 
         <Copyright />  
