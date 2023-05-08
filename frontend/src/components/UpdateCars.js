@@ -31,6 +31,7 @@ export default function UpdateCars() {
 
   const [cars, setCars] = useState([]);
 
+
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -129,7 +130,7 @@ export default function UpdateCars() {
             <Button variant="contained" color="primary" type="submit">
               Update
             </Button>{" "}
-            <Button variant="contained" color="secondary" onClick={handleCancel}>
+            <Button variant="outlined" onClick={handleCancel}>
               Cancel
             </Button>
           </Grid>

@@ -22,13 +22,14 @@ export default function OlderThanFiveYears() {
 
   return (
     <Container maxWidth="sm">
-      <Typography variant="h4" align="center" style={{ marginTop: '30px' }}>
+      <Typography variant="h5" align="center" style={{ marginTop: '30px' }}>
         Cars older than 5 years
       </Typography>
       <TableContainer style={{ marginBottom: '20px' }}>
         <Table>
           <TableHead>
             <TableRow>
+              <TableCell>Year</TableCell>
               <TableCell>Make</TableCell>
               <TableCell>Model</TableCell>
               <TableCell>Registration Number</TableCell>
@@ -39,6 +40,7 @@ export default function OlderThanFiveYears() {
             {olderCars && olderCars.length > 0 ? (
               olderCars.map((car) => (
                 <TableRow key={car._id}>
+                  <TableCell>{car.year}</TableCell>
                   <TableCell>{car.make}</TableCell>
                   <TableCell>{car.model}</TableCell>
                   <TableCell>{car.reg_num}</TableCell>

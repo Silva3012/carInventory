@@ -6,8 +6,9 @@ import {
   Button, 
   Grid,
   Typography,
-  Container
+  Container,
 } from '@mui/material';
+
 
 // Style component Typography with custom styles
 const CustomTypography = styled(Typography)({
@@ -72,9 +73,11 @@ export default function EditCar(props) {
 
   // Render the form to edit a car
   return (
+    <div>
     <Container maxWidth="sm">
     <form onSubmit={handleSubmit}>
-      <CustomTypography variant="h4" align="center">Update Car Information</CustomTypography>
+      
+      <CustomTypography variant="h5" align="center">Update Car Information</CustomTypography>
       <CustomGrid container spacing={2}>
         <Grid item xs={12}>
           <TextField 
@@ -159,5 +162,6 @@ export default function EditCar(props) {
       </CustomGrid>
     </form>
    </Container>
+   </div>
   );
 };

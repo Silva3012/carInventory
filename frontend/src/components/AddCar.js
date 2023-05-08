@@ -1,6 +1,6 @@
 // Import required modules
 import React, { useState } from 'react';
-import { Button, Container, TextField, Typography } from '@mui/material';
+import { Button, Container, TextField, Typography} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 
@@ -58,7 +58,7 @@ export default function AddCar() {
     } catch (error) {
         // Log an any errors
         console.log(error);
-    }
+    } 
   };
 
   // Handle Cancel
@@ -71,7 +71,6 @@ export default function AddCar() {
       <Typography variant="h5" component="h2" gutterBottom align="center" style={{ marginTop: '30px' }}>
         Add A Car
       </Typography>
-    
       <Container maxWidth="sm">
         <Box sx={{ mt: 3 }}>
           <form onSubmit={handleSubmit}>
@@ -144,8 +143,7 @@ export default function AddCar() {
               Add Car
             </Button>{" "}
             <Button
-              variant="contained"
-              color="secondary"
+              variant="outlined"
               type="submit"
               sx={{ mt: 3, mb: 10 }}
               onClick={handleCancel}
